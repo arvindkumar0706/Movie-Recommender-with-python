@@ -1,0 +1,161 @@
+/* Background & body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+/* Header/Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* Main content container */
+.container {
+    flex: 1;
+    width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    height: 400px;
+}
+
+.main-container {
+    flex: 1;
+    width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+.main-container h2{
+    text-align: center;
+}
+.main-container form input,button{
+    margin-top: 20px;
+    font-size: 25sp;
+}
+
+.results-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.result-card {
+    flex: 0 0 auto;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.result-card:hover {
+    transform: scale(1.05);
+}
+
+.result-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+/* Form and button styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #d35400;
+}
+
+/* Recommendation cards */
+.result-card {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    object-fit: contain;
+}
+
+.result-card img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

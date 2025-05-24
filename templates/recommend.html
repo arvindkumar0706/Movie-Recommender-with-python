@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>🎥 Your Movie Recommendations</header>
+
+    <div class="container">
+        <h2>Based on: "{{ movie }}"</h2>
+
+        {% if recommendations %}
+            <div class="results-wrapper">
+                {% for rec in recommendations %}
+                    <div class="result-card">
+                        <img src="{{ rec.poster }}" alt="{{ rec.title }}">
+                        <div>{{ rec.title }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="result-card">❌ No recommendations found for "<strong>{{ movie }}</strong>".</div>
+        {% endif %}
+
+        <a class="back-link" href="/">🔙 Try Another Movie</a>
+    </div>
+
+    <footer>Movie Data via OMDb | UI by You 🎨</footer>
+</body>
+</html>

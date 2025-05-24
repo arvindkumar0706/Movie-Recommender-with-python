@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>🎬 Movie Recommender</header>
+    <div class="main-container">
+        <h2>Find Similar Movies</h2>
+        <form action="/recommend" method="post">
+            <input type="text" name="movie" placeholder="e.g., Inception" required>
+            <button type="submit">Get Recommendations</button>
+        </form>
+    </div>
+    <footer>Powered by Flask & TMDB Dataset</footer>
+</body>
+</html>
